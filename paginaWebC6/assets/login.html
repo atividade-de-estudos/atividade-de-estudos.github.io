@@ -28,16 +28,26 @@
     </nav>
     <button class="top-button">Abra sua conta</button>
   </header>
-  <section class="full-banner">
+  <section class="full-banner-form">
+    <div class="container-login">
+        <form class="form-login">
 
-    <div class="destak">
-      <div>
-        <h3><span>C6 GLOBAL INVEST</span>Bolsa Americana e fundo globais direto no app</h3>
-      </div>
-      <h1>O banco da vida de 20 milhões de pessoas</h1>
-      <h2>Conta digital, cartão de crédito, investimentos e mais: tudo em um só app</h2>
-      <button>Nossos produtos</button>
+            <label for="login">
+                CPF*: 
+                <input type="text" name="login" id="login" placeholder="Digite o CPF"/>
+            </label>
+
+            <label for="senha">
+                Senha*:
+                <input type="password" name="password" id="password" placeholder="Digite a senha">
+            </label>
+
+            <button type="submit">continuar</button>
+            <p><a href="#">Esqueci minha senha</a></p>
+            <p><a href="#">Ainda não sou cliente</a></p>
+        </form>
     </div>
+  
   </section>
 
   <footer></footer>
@@ -46,14 +56,6 @@
     const button = document.querySelector(".top-button");
     button.classList.add("disabled");
     header.style.background = "none";
-    //margin-bottom
-    //marginBottom    
-    //janela = browser e site = parte visivel
-    //window e document
-
-    //evento chamado scroll. JavaScript é uma linguagem dirigida a evento
-    //Criando uma escuta para um evento 
-    //window.addEventListener('scroll',função(evento));
 
     window.addEventListener('scroll',(e)=>{
        if (scrollY < 100) {
@@ -67,14 +69,6 @@
 
     });
 
-//teremos uma aula sobre Funções em JS
-//A forma mais simples de uma função, é uma seta
-//         Arrow Function
-//   =>, a estrutura base é: () => {}
-// const msg = (nome_time) => alert(nome.time);
-// msg ('Corinthians');
-// (nome_time) => { corpo da função }
-  
   </script>
 </body>
 
