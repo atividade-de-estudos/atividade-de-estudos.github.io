@@ -46,10 +46,11 @@
   <script>
     const header = document.querySelector(".top-site");
     const button = document.querySelector(".top-button");
+    const body = document.querySelector("body");
+
     button.classList.add("disabled");
-    header.style.background = "none";
-    //margin-bottom
-    //marginBottom    
+    header.style.background = "none"; 
+      
     //janela = browser e site = parte visivel
     //window e document
 
@@ -58,15 +59,20 @@
     //window.addEventListener('scroll',função(evento));
 
     window.addEventListener('scroll',(e)=>{
-       if (scrollY < 100) {
+      console.log(body.clientHeight)// altura total 2000
+
+      if(window.scrollY < 100){
         button.classList.add("disabled");
-        header.style.background = "none"; 
+        header.style.background= 'none';
+
+       }else if(scrollY >= 1000){
+            header.style.background= 'rgba( 36,36,36,0.60)';
+            header.classList.add("disabled");
       }else{
+        header.classList.remove("disabled");
         button.classList.remove("disabled");
-        header.style.background = '#fff';
+        header.style.background='#fff';
       }
-
-
     });
 
 //teremos uma aula sobre Funções em JS

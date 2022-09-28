@@ -115,3 +115,17 @@ button:hover {
   width: auto;
   height: 24px;
 }
+// alterar footer
+header.disabled {
+  & > nav {
+    > ul {
+      li {
+        a {
+          font-weight: bold;
+          color: rgb(255, 255, 255);
+          font-family: "Open Sans";
+        }
+      }
+    }
+  }
+}

@@ -32,16 +32,22 @@
   </header>
   <section class="full-banner-form">
     <div class="container-login">
-        <form class="form-login">
+        <form class="form-login" method="post">
 
             <label for="login">
                 CPF*: 
-                <input type="text" name="login" id="login" placeholder="Digite o CPF"/>
+                <input required type="text" name="login" id="login" placeholder="Digite o CPF: xxx.xxx.xxx-xx"       
+			          pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}"
+                oninvalid="this.setCustomValidity('Preencha o campo CPF')"
+                oninput="this.setCustomValidity('')"/>
             </label>
 
             <label for="senha">
                 Senha*:
-                <input type="password" name="password" id="password" placeholder="Digite a senha">
+                <input required type="password" name="password" id="password" placeholder="Digite a senha"
+                pattern="(?=*\d),?=*[a-z]),?=*[A-Z]).{8,}"
+                title="A senha deve conter ao menos 8 digitos, sendo 1 número, 1 letra maiúscula e 1 letra minúcula "
+                oninvalid="this.setCustomValidity('Senha inválida, a senha deve conter ao menos 8 digitos, sendo  menos 1 número, 1 letra maiúscula e 1 letra minúcula')"/>
             </label>
 
             <button type="submit">continuar</button>
@@ -72,6 +78,9 @@
     });
 
   </script>
+
+  <script type="text/javascript" src="assets/js/main.js"></script>
+
 </body>
 
 </html>
