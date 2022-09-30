@@ -34,25 +34,39 @@
     <div class="container-login">
         <form class="form-login" method="post">
 
-            <label for="login">
-                CPF*: 
-                <input required type="text" name="login" id="login" placeholder="Digite o CPF: xxx.xxx.xxx-xx"       
-			          pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}"
+          <label for="login">
+            CPF*: 
+            <script type="text/javascript">              
+                function mascaraCPF(i){
+                    var verificador = i.value;
+                    if(isNaN(verificador[verificador.length-1])){ // impede entrar outro caractere que não seja número
+                        i.value = verificador.substring(0, verificador.length-1);
+                        return;
+                    } 
+                    i.setAttribute("maxlength", "14");
+                    if (verificador.length == 3 || verificador.length == 7) i.value += ".";
+                    if (verificador.length == 11) i.value += "-";
+                }                                              
+            </script>
+
+            <input required type="text" name="login" id="login" placeholder="Digite o CPF"       
+                pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}"
                 oninvalid="this.setCustomValidity('Preencha o campo CPF')"
-                oninput="this.setCustomValidity('')"/>
-            </label>
+                oninput="mascaraCPF(this)"/>
+        
+          </label>
 
-            <label for="senha">
-                Senha*:
-                <input required type="password" name="password" id="password" placeholder="Digite a senha"
-                pattern="(?=*\d),?=*[a-z]),?=*[A-Z]).{8,}"
-                title="A senha deve conter ao menos 8 digitos, sendo 1 número, 1 letra maiúscula e 1 letra minúcula "
-                oninvalid="this.setCustomValidity('Senha inválida, a senha deve conter ao menos 8 digitos, sendo  menos 1 número, 1 letra maiúscula e 1 letra minúcula')"/>
-            </label>
+          <label for="senha">
+              Senha*:
+              <input required type="password" name="password" id="password" placeholder="Digite a senha"
+              pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])[0-9a-zA-Z$*&@#]{8,}$/"
+              title="A senha deve conter ao menos 8 digitos, sendo 1 número, 1 letra maiúscula e 1 letra minúcula "
+              oninvalid="this.setCustomValidity('Senha inválida, a senha deve conter ao menos 8 digitos, sendo  menos 1 número, 1 letra maiúscula e 1 letra minúcula')"/>
+          </label>
 
-            <button type="submit">continuar</button>
-            <p><a href="#">Esqueci minha senha</a></p>
-            <p><a href="#">Ainda não sou cliente</a></p>
+          <button type="submit">continuar</button>
+          <p><a href="#">Esqueci minha senha</a></p>
+          <p><a href="#">Ainda não sou cliente</a></p>
         </form>
     </div>
   
@@ -62,18 +76,30 @@
   <script>
     const header = document.querySelector(".top-site");
     const button = document.querySelector(".top-button");
+    
     button.classList.add("disabled");
     header.style.background = "none";
 
-    window.addEventListener('scroll',(e)=>{
-       if (scrollY < 100) {
-        button.classList.add("disabled");
-        header.style.background = "none"; 
-      }else{
-        button.classList.remove("disabled");
-        header.style.background = '#fff';
-      }
+    window.addEventListener('scroll',(e)=>{      
 
+      //Deixa o Header e o Button "Transparentes"
+      if(window.scrollY < 100){
+        button.classList.add("disabled");
+        header.style.background= 'none';
+
+      //Deixa o Footer "Preto" e as Letra e o Logo "Branco"
+      }else if(scrollY >= 1000){ 
+        header.classList.add("disabled");
+        header.style.background= "#000";
+        logo.style.fill = "#fff";
+
+      //Normaliza o Header e as letras da página
+      }else{
+        header.classList.remove("disabled");
+        button.classList.remove("disabled");
+        header.style.background ="#fff";
+        logo.style.fill = "#000";
+      }
 
     });
 
