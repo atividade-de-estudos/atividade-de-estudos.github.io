@@ -46,3 +46,19 @@ Como Funciona o Patern Adicionado no preenchimento de senha:
   (?=.*[$*&@#])         => deve conter ao menos um caractere especial
   [0-9a-zA-Z$*&@#]{8,}  => deve conter ao menos 8 dos caracteres mencionados
 $/
+
+-------------------------------
+
+=> explicando o laco de repeticao
+
+    let total= 2;
+    setInterval(() =>{
+        document.querySelector(alvo).innerHTML = texto[total >= texto.length -1? total = 0 : total+=1];
+    }, tempo *1000);
+
+=> Explicando: 
+[total >= texto.length -1 => condicao
+  ? total = 0 => Se condicao verdadeira
+    : total+=1] => Se nao faca
+
+--------------------------------
