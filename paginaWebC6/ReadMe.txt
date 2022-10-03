@@ -7,6 +7,8 @@ $npm init -y
     "dev": "sass --watch ./assets/scss:./assets/css --style compressed --no-source-map"
   },
 
+------------------------------------
+
 => instalar sass
 $npm i -g sass
 
