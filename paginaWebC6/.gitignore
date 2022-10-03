@@ -1,38 +1,3 @@
 assets/js/ignorar.js
 
-
-# Creating GIT Ignore file:
-# $touch .gitignore
-
-# or
-# $vi .gitignore
-
-# 	 Ex.: *.json (* mean that all files .json will be ignored)
-# 	 EX.: 
-# Inside this folder, add the files that will be ignored
-
-# Retunrning to MAIN file:
-# $:wq 
-
-# Also you can use to add inside .gitignore:
-# $echo fileName >> .gitignore
-
-# *
-# Which files to ignore?
-# We recommend ignoring files of types like :
-# • Log files
-# •  Files that contain passwords, credentials or information
-#   confidential
-# •  System and temporary files
-# •  Generated files such as test executables
-# • Compiled outputs (executables, etc.)
-# • Personal archives
-# *
-# Examples of patterns:
-# => testArch # ignore the file ( or directory ) testarch
-# => *.log # ignore all files with .log extension
-# => arq* # ignore all files starting with arq
-# => ?rq # ignore all files regardless of the first character, but which have rq in the sequence
-# => testDir/ # ignore Test dir and its files
-# => **/testDir # ignores all directories named test dir
-# => !output.log # DO NOT ignore the output.log file
+#if needs help go to: https://www.notion.so/GIT-GITHUB-6b1f77bb664d4f659d3aff8314d6ddc4
