@@ -30,7 +30,7 @@ function mudaTitulo(novoTitulo){
 }
 //escopo, orientação a objeto
 
-mudaTitulo("Vai Corinthians");
+// mudaTitulo("Vai Corinthians");
 // expressão de função - Function Expression Ex.:"const nomeDaVariavel = ...."
 // função anônima, quando tem 'function' mas não tem um nome "Ex.: =function(parametro)", precisa de contexto 
 const mudaTitulo2 = function(novoTitulo){
@@ -47,4 +47,19 @@ const relogio = () => {
     const date = new Date();
     mudaTitulo2(date.toLocaleTimeString());
 };
+
 setInterval(relogio, 1000);
+
+//setInterval(() => {},tempo);
+
+const frases = ["A vida e um presente", "A vida e curta", "A vida e uma dadiva"];
+
+const mudaFrase = (alvo, texto, tempo ) =>{
+    //const frase = frase [Math.floor(Math.random() * frase.length)];
+    // mudaTitulo("h3", frase);
+    let total= 2;
+    setInterval(() =>{
+        document.querySelector(alvo).innerHTML = texto[total >= texto.length -1? total = 0 : total+=1];
+    }, tempo *1000);
+}
+mudaFrase("h1", frases, 4);

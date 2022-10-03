@@ -46,4 +46,3 @@ Como Funciona o Patern Adicionado no preenchimento de senha:
   (?=.*[$*&@#])         => deve conter ao menos um caractere especial
   [0-9a-zA-Z$*&@#]{8,}  => deve conter ao menos 8 dos caracteres mencionados
 $/
-
