@@ -53,3 +53,4 @@ toolTip.addEventListener("mouseout", (e) => {
 });
 
 //Criar uma funcao toolTip como padrao para usar = toolTip("#toolTip", "Texto do tipo");
+console.log('');

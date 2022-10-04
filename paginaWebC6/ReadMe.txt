@@ -68,3 +68,21 @@ $/
 Criado a o arquivo toolTip html, js e scss
 
 -------------------------------
+
+Criado atalho no VS Code para o console.log:
+
+Va para essa pasta:
+C : > Users > Thiago > AppData > Roaming > Code > User > { } keybindings.json
+
+copie e cole esse funcao:
+
+{
+  "key": "ctrl+shift+l",
+  "command": "editor.action.insertSnippet",
+  "when": "editorTextFocus",
+  "args": {
+    "snippet": "console.log('${TM_SELECTED_TEXT}$1')$2;"
+  }
+}  
+
+---------------------------------
