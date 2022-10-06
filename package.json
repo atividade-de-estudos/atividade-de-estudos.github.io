@@ -1,11 +1,11 @@
 {
   "name": "paginawebc6",
   "version": "1.0.0",
-  "description": "//criar pacoite JSON\r npm init -y",
+  "description": "//criar pacote JSON\r npm init -y",
   "main": "index.js",
   "scripts": {
     "dev": "sass --watch ./paginawebc6/assets/scss:./paginawebc6/assets/css --style compressed --no-source-map",
-    "git": "git add --all && git commit -m\"Deploy\" && git push origin main && echo \"Deployed\" && npm run dev",
+    "git": "git add --all && git commit -m\"Deploy\" && git push origin main && git push site main && echo \"Deployed\" && npm run dev",
     "site": "git add --all && git commit -m\"DeploySite\" && git push site main && echo \"DeployedSite\""
   },
   "repository": {
