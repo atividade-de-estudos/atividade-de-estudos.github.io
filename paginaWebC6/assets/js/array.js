@@ -43,7 +43,7 @@ veiculos.forEach((value, key) =>{
 
 const nbaTeams = ["Warriors", "Raptors", "Lakers", "Celtics", "Bucks", "76ers"];
 
-// sliece - retorna um novo array, o primeiro parametro e opcional, ecomeca em zero
+// slice - retorna um novo array, o primeiro parametro e opcional, ecomeca em zero
 // o ultimo parametro determina ate onde deve ser filtrado, porem excluindo este ultimo elemento
 const newNba = nbaTeams.slice(3,nbaTeams.length);// mostra todos os elementos a partir do 3 elemento
 const newNba2 = nbaTeams.slice(1);// remove o primeiro

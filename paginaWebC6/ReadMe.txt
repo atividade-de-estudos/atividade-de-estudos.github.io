@@ -87,19 +87,7 @@ copie e cole esse funcao:
 
 ---------------------------------
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulta cep</title>
-</head>
-<body>
-    <input type="text" maxlength="9" required id="cep">
-    <div id="resultado">
+Criando tabela com BOOTSTRAP
 
-    </div>
-    <script type="text/javascript" src="/assets/js/fetch.js"></script>
-</body>
-</html>
+ No terminal use o "comando npm i bootstrap"
+ "npm -l" serve para ter uma visao geral do que ja foi feito pelo terminal
