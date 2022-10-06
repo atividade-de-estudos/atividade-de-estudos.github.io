@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "sass --watch ./paginawebc6/assets/scss:./paginawebc6/assets/css --style compressed --no-source-map",
-    "git": "git add --all && git commit -m\"Deploy\" && git push origin main && git push origin site && echo \"Deployed\" && npm run dev"
+    "git": "git add --all && git commit -m\"Deploy\" && git push origin main && git push site main && echo \"Deployed\" && npm run dev"
   },
   "repository": {
     "type": "git",
