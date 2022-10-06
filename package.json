@@ -4,8 +4,8 @@
   "description": "//criar pacoite JSON\r npm init -y",
   "main": "index.js",
   "scripts": {
-    "dev": "sass --watch ./assets/scss:./assets/css --style compressed --no-source-map",
-    "git": "git add --all && git commit -m\"Deploy\" && git push origin main && echo \"Deployed\" && npm run dev"
+    "dev": "sass --watch ./paginawebc6/assets/scss:./paginawebc6/assets/css --style compressed --no-source-map",
+    "git": "git add --all && git commit -m\"Deploy\" && git push origin main && git push origin site && echo \"Deployed\" && npm run dev"
   },
   "repository": {
     "type": "git",
